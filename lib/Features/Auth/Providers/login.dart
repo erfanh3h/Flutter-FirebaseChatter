@@ -21,16 +21,14 @@ class LoginProvider extends ChangeNotifier with ReassembleHandler {
       Navigator.pop(context);
       Navigator.of(context).pushReplacementNamed(Routes.chatsHome);
     } catch (e) {
-      if (e.toString().contains('user-not-found')) {
+      if (e.toString().contains('user-not-found'))
         Fluttertoast.showToast(msg: 'ایمیل وارد شده نامعتبراست');
-      } else if (e.toString().contains('wrong-password')) {
+      else if (e.toString().contains('wrong-password'))
         Fluttertoast.showToast(msg: 'رمزواردشده صحیح نمی باشد');
-      } else if (e.toString().contains('user-disabled')) {
+      else if (e.toString().contains('user-disabled'))
         Fluttertoast.showToast(msg: 'حساب شما به حالت تعلیق درآمده است');
-      } else {
+      else
         Fluttertoast.showToast(msg: 'مشکلی در ورود به حساب بوجود آمده است');
-      }
-      print(e);
     }
     isLoading = false;
     notifyListeners();

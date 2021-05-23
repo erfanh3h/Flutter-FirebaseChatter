@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutterchat/Core/Widgets/loading-widget.dart';
-import 'package:flutterchat/Features/Home/Providers/home.dart';
 import 'package:provider/provider.dart';
 
 import '../../../Core/Configs/routes.dart';
+import '../../../Core/Widgets/loading-widget.dart';
 import '../../../Core/Widgets/simple-header.dart';
+import '../Providers/home.dart';
 
 class HomeScreen extends StatelessWidget {
   @override

@@ -16,6 +16,7 @@ class ChatProvider extends ChangeNotifier with ReassembleHandler {
 
   TextEditingController chatCtrl = TextEditingController();
   final String targetUsername;
+
   final fireStore = FirebaseFirestore.instance;
 
   List<String> onGoingChats = [];
@@ -60,14 +61,10 @@ class ChatProvider extends ChangeNotifier with ReassembleHandler {
           case ConnectivityResult.none:
             break;
           default:
-            for (var chat in onGoingChats) {
-              print('object');
-              sendChat(chat, resetCtrl: false);
-            }
+            for (var chat in onGoingChats) sendChat(chat, resetCtrl: false);
             onGoingChats = [];
             notifyListeners();
         }
-        print(result.toString());
         connectivityResult = result;
       });
       streamWidget = StreamBuilder<QuerySnapshot>(
@@ -101,8 +98,6 @@ class ChatProvider extends ChangeNotifier with ReassembleHandler {
       notifyListeners();
       return;
     }
-    // isSendingChat = true;
-    // notifyListeners();
     try {
       await fireStore.collection('messages').add({
         'receiverEmail': targetUsername,
@@ -113,10 +108,7 @@ class ChatProvider extends ChangeNotifier with ReassembleHandler {
       });
     } catch (e) {
       Fluttertoast.showToast(msg: 'مشکلی درارسال پیام بوجود آمده است');
-      print(e);
     }
-    // isSendingChat = false;
-    // notifyListeners();
   }
 
   @override

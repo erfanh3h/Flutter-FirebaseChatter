@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutterchat/Features/Chat/Providers/chat.dart';
 import 'package:provider/provider.dart';
+
+import '../Providers/chat.dart';
 
 class OngoingChatBox extends StatelessWidget {
   @override

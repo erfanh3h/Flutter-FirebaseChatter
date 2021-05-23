@@ -1,13 +1,13 @@
 
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:flutterchat/Features/Chat/Models/chat.dart';
 import 'package:hive/hive.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:provider/provider.dart';
 
 import 'Core/Configs/app-session.dart';
 import 'Core/Configs/routes.dart';
+import 'Features/Chat/Models/chat.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutterchat/Core/Widgets/loading-widget.dart';
+import '../../../Core/Widgets/loading-widget.dart';
 import 'package:provider/provider.dart';
 
 import '../../../Core/Widgets/input-box.dart';

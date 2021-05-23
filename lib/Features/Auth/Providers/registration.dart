@@ -21,12 +21,10 @@ class RegistrationProvider extends ChangeNotifier with ReassembleHandler {
       Navigator.pop(context);
       Navigator.of(context).pushReplacementNamed(Routes.chatsHome);
     } catch (e) {
-      if (e.toString().contains('email-already-in-use')) {
+      if (e.toString().contains('email-already-in-use'))
         Fluttertoast.showToast(msg: 'ایمیل وارد شده تکراری است');
-      } else {
+      else
         Fluttertoast.showToast(msg: 'مشکلی در ساخت حساب بوجود آمده است');
-      }
-      print(e);
     }
     isLoading = false;
     notifyListeners();

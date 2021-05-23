@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutterchat/Features/Chat/Screens/chats-home.dart';
 
 import '../../Features/Auth/Screens/login.dart';
 import '../../Features/Auth/Screens/registration.dart';
 import '../../Features/Chat/Screens/chat.dart';
+import '../../Features/Chat/Screens/chats-home.dart';
 import '../../Features/Home/Screens/home.dart';
 
 class Routes {

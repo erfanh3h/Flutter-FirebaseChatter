@@ -1,5 +1,6 @@
 import 'package:flutter/foundation.dart';
 import 'package:hive/hive.dart';
+
 part 'chat.g.dart';
 
 @HiveType(typeId: 0)
